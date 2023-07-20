@@ -81,17 +81,16 @@
             <div class="col mb-3">
                 <label for="pwd" class="form-label">Password</label>
                 <input type="password" class="form-control" id="=pwd" formControlName="pwd">
-                <div class="form-text"></div>
                 <div class="form-text text-danger" *ngIf="PwD.errors?.['required'] && (PwD.touched || PwD.dirty)">
                     Password is required.
                 </div>
-                <div class="form-text text-danger" *ngIf="PwD.errors?.['minlength'] || PwD.errors?.['maxlength'] && (Gender.touched || Gender.dirty)">
+                <div class="form-text text-danger" *ngIf="PwD.errors?.['minlength'] || PwD.errors?.['maxlength'] && (PwD.touched || PwD.dirty)">
                     Password should be atleast 6 and at max 15 characters long.
                 </div>
             </div>
             <div class="col mb-3">
                 <label for="rpwd" class="form-label">Repeat Password</label>
-                <input type="password" class="form-control" id="=rpwd" formControlName="rpwd">
+                <input type="password" class="form-control" id="rpwd" formControlName="rpwd">
                 <div class="form-text text-danger" [ngStyle]="{'display':repeatPass}">
                     Password is required.
                 </div>

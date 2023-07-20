@@ -21,7 +21,7 @@ export class RegisterComponent implements OnInit{
       Validators.email]),
     mobile: new FormControl("",[Validators.required,Validators.minLength(10),Validators.pattern("[0-9]*"),Validators.maxLength(10)]),
     gender: new FormControl("",[Validators.required]),
-    pwd: new FormControl("",[Validators.required,Validators.minLength(6),Validators.minLength(15)]),
+    pwd: new FormControl("",[Validators.required,Validators.minLength(6),Validators.maxLength(15)]),
     rpwd: new FormControl("")
   });
 
